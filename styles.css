@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Forum&family=Manrope:wght@200..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-/* @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Forum&family=Manrope:wght@200..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 * {
   margin: 0;
@@ -10,9 +10,9 @@
 
 body {
   color: lightgray;
-  background-color: #0c0c1d;
-  font-family: manrope, sans-serif;
+  background: linear-gradient(180deg,#111132, #0c0c1d);
   cursor: grab;
+  font-family: Manrope, sans-serif;
 }
 
 *::selection {
@@ -36,14 +36,11 @@ body {
 
 /* Container Styles */
 .main-container {
-  background-color: #0c0c1d;
+  background: linear-gradient(180deg,#111132, #0c0c1d);
   margin: auto;
 }
 
 /* Home Section */
-#home {
-  background: linear-gradient(180deg, #0c0c1d, #111132);
-}
 
 /* Navbar Styles */
 .navbar {
@@ -51,7 +48,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(180deg, #111132, #0c0c1d);
+  background: #111132;
   border-bottom: 1px solid #272735;
   z-index: 1000;
   padding: 20px 0;
@@ -70,16 +67,16 @@ body {
 
 .hamburger-menu {
   display: none;
-  align-items: flex-end;
 }
 
 .switch {
   position: relative;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
-  background: rebeccapurple;
-  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  background: #1a1a4b;
+  border-radius: 4px;
+  border: 1px solid #272735;
 }
 
 .switch input {
@@ -157,9 +154,28 @@ input:checked + div span.line-2 {
 }
 
 .sidebar .nav-link {
+  font-family: "Patrick Hand", cursive;
+  font-size: 18px;
   color: lightgray;
   text-decoration: none;
-  margin: 10px 0;
+  margin: 15px 0;
+}
+
+.sidebar .resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  width: 100px;
+  background-color: transparent;
+  border: 1px solid #272735;
+  color: lightgray;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .resume {
+  background-color: #272735;
 }
 
 .main-content {
@@ -176,10 +192,7 @@ input:checked + div span.line-2 {
     display: block;
   }
   .navbar {
-    border-bottom: none;
-  }
-  .logo {
-    display: none;
+    padding: 10px;
   }
   .nav-links a {
     display: none;
@@ -189,21 +202,23 @@ input:checked + div span.line-2 {
 /* Sidebar Ends */
 
 .logo {
-  font-family: "figtree", cursive;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Patrick Hand", cursive;
 }
 
 .nav-links {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: lightgray;
+  font-size: 14px;
   font-weight: 500;
   transition: color 0.3s ease;
-  box-sizing: border-box;
 }
 
 .nav-links a:hover {
@@ -227,7 +242,6 @@ input:checked + div span.line-2 {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(180deg, #0c0c1d, #111132);
   width: 100%;
   padding-top: 100px;
   display: flex;
@@ -248,50 +262,49 @@ input:checked + div span.line-2 {
 }
 
 .home-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50%;
+  position: relative;
 }
 
 .home-img {
-  width: 250px;
-  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  border: 1px solid #272735;
-  border-radius: 50%;
-  background-color: #0f0f31;
+  width: 250px;
+  height: 250px;
 }
 
 .home-img img {
-  width: 100%;
-  height: auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: rebeccapurple;
+  position: absolute;
+  opacity: 0.6;
 }
 
 .circle-1 {
   border-radius: 50%;
-  background-color: #0f0f31;
-  width: 150px;
-  height: 150px;
+  background-color: rebeccapurple;
+  width: 140px;
+  height: 140px;
   position: absolute;
-  top: -50px;
-  left: -50px;
-  transform: translate(130%, -10%);
+  transform: translate(60%, -50%);
   opacity: 0.6;
-  border: 1px solid #272735;
 }
 
 .circle-2 {
   border-radius: 50%;
-  background-color: #0f0f31;
+  background-color: rebeccapurple;
   width: 90px;
   height: 90px;
   position: absolute;
-  top: -50px;
-  right: -50px;
-  transform: translate(10%, 90%);
-  opacity: 0.4;
-  border: 1px solid #272735;
+  transform: translate(130%, -10%);
+  opacity: 0.6;
 }
 
 .details {
@@ -314,7 +327,7 @@ input:checked + div span.line-2 {
   color: rebeccapurple;
   font-size: 35px;
   text-transform: uppercase;
-  font-family: "figtree", cursive;
+  font-family: "Patrick Hand", cursive;
 }
 
 .hero-container > div > p {
@@ -359,20 +372,18 @@ input:checked + div span.line-2 {
 
 #about {
   max-width: 1266px;
-  /* height: 100%; */
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10%;
-  padding: 5% 2%;
+  padding: 5%;
 }
 
 .about-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 60%;
 }
 
 .about-container h1 {
@@ -381,7 +392,7 @@ input:checked + div span.line-2 {
   font-weight: 500;
   margin-bottom: 20px;
   color: rebeccapurple;
-  font-family: "figtree", cursive;
+  font-family: "Patrick Hand", cursive;
 }
 
 .about-container h2 {
@@ -399,10 +410,6 @@ input:checked + div span.line-2 {
   opacity: 0.8;
   letter-spacing: 0.8px;
   line-height: 27px;
-}
-
-.profile-container {
-  width: 40%;
 }
 
 .profile-container img {
@@ -476,7 +483,7 @@ input:checked + div span.line-2 {
   font-weight: 500;
   margin-bottom: 20px;
   color: rebeccapurple;
-  font-family: "figtree", cursive;
+  font-family: "Patrick Hand", cursive;
 }
 
 #skills {
@@ -497,7 +504,7 @@ input:checked + div span.line-2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #0d0d20;
+  background-color: #0e0e29;
   cursor: pointer;
   width: 200px;
   padding: 15px;
@@ -507,7 +514,7 @@ input:checked + div span.line-2 {
 }
 
 .tech-stack-item:hover {
-  background-color: #141424;
+  background-color: #11112e;
 }
 
 .tech-stack-item img {
@@ -551,7 +558,7 @@ input:checked + div span.line-2 {
   font-weight: 500;
   margin-bottom: 10px;
   color: rebeccapurple;
-  font-family: "figtree", cursive;
+  font-family: "Patrick Hand", cursive;
 }
 
 .project-container {
@@ -753,7 +760,7 @@ input:checked + div span.line-2 {
   font-weight: 500;
   margin-bottom: 20px;
   color: rebeccapurple;
-  font-family: "figtree", cursive;
+  font-family: "Patrick Hand", cursive;
 }
 
 .stats-chart {
@@ -874,7 +881,7 @@ input,
 textarea {
   padding: 10px;
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid #272735;
   color: white;
   border-radius: 5px;
 }
