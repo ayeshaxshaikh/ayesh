@@ -87,7 +87,7 @@ function downloadFile(event) {
     window.open(url, "_blank");
     const tempLink = document.createElement("a");
     tempLink.href = url;
-    tempLink.download = "AyeshaTabassum-Resume.pdf";
+    tempLink.download = "Ayesha_Tabassum_Resume.pdf";
     document.body.appendChild(tempLink);
     tempLink.click();
     document.body.removeChild(tempLink);
