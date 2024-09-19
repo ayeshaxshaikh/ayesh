@@ -819,7 +819,7 @@ input:checked + div span.line-2 {
 
 @media (max-width: 768px) {
   .contact {
-    height: 110vh;
+    margin-bottom: 20px;
   }
   .textContainer {
     flex: 0;
@@ -832,9 +832,6 @@ input:checked + div span.line-2 {
     line-height: 1em;
   }
 
-  /* .textContainer .item {
-          display: none;
-      } */
 }
 
 .textContainer h1 {
